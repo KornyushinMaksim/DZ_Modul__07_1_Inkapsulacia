@@ -1,4 +1,4 @@
-package org.example.Task6_labrary;
+package org.example.Task6_labrary.model;
 
 import java.util.Objects;
 
@@ -20,16 +20,8 @@ public class Book {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getAuthor() {
         return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     @Override

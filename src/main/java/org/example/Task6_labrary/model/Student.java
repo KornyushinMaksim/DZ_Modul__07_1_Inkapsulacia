@@ -1,4 +1,4 @@
-package org.example.Task6_labrary;
+package org.example.Task6_labrary.model;
 
 import java.util.ArrayList;
 

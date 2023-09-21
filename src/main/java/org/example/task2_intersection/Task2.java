@@ -1,6 +1,6 @@
-package org.example.Task2_intersection;
+package org.example.task2_intersection;
 
-import org.example.Task1_intervalLength.Task1;
+import org.example.task1_intervalLength.Task1;
 
 public class Task2 extends Task1 {
     private int indexOne;

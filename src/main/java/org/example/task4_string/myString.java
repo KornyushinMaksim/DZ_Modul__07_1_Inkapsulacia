@@ -1,4 +1,4 @@
-package org.example.Task4_string;
+package org.example.task4_string;
 
 public class myString {
     char[] string;

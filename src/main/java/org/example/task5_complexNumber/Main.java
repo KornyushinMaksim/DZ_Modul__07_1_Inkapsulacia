@@ -8,7 +8,7 @@
 //        ■ умножения.
 //        Протестировать с использованием JUnit.
 
-package org.example.Task5_complexNumber;
+package org.example.task5_complexNumber;
 
 public class Main {
     public static void main(String[] args) {

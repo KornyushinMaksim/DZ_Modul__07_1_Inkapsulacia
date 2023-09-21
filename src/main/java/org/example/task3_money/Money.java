@@ -1,4 +1,4 @@
-package org.example.Task3_money;
+package org.example.task3_money;
 
 public class Money {
     private long rub;

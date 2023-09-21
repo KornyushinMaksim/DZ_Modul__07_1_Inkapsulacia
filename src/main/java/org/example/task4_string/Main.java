@@ -10,7 +10,7 @@
 //        ■ метод очистки строки (делает строку пустой);
 //        ■ метод поиска символа в строке.
 
-package org.example.Task4_string;
+package org.example.task4_string;
 
 public class Main {
     public static void main(String[] args) {

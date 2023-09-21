@@ -6,7 +6,7 @@
 //        деление суммы на дробное число, умножение на дробное число и операции сравнения.
 //        Протестировать с использованием JUnit.
 
-package org.example.Task3_money;
+package org.example.task3_money;
 import java.util.Scanner;
 
 public class Main {

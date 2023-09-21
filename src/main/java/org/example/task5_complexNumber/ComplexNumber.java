@@ -1,4 +1,4 @@
-package org.example.Task5_complexNumber;
+package org.example.task5_complexNumber;
 
 public class ComplexNumber {
     private double rezD;

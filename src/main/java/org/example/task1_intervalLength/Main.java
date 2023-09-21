@@ -7,9 +7,9 @@
 //        Входные данные: 3 9, -2 4, 11 15
 //        Выходные 3, 6, 4
 
-package org.example.Task1_intervalLength;
+package org.example.task1_intervalLength;
 
-import org.example.Task2_intersection.Task2;
+import org.example.task2_intersection.Task2;
 
 import java.util.Scanner;
 

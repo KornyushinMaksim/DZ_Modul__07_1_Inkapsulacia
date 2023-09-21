@@ -1,4 +1,4 @@
-package org.example.Task3_money;
+package org.example.task3_money;
 import javax.swing.JOptionPane;
 
 public class Massage {

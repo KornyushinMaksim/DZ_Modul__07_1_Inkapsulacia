@@ -1,6 +1,4 @@
-package org.example.Task1_intervalLength;
-
-import java.util.Arrays;
+package org.example.task1_intervalLength;
 
 public class Task1 {
     protected String strIn;

@@ -1,9 +1,13 @@
 package org.example.task3_money;
 
+import com.sun.javafx.binding.StringFormatter;
+
+import java.text.DecimalFormat;
+
 public class Money {
     private long rub;
     private byte kop;
-    boolean flag;
+    private boolean flag;
 
     public Money() {
         this.rub = 0;
@@ -19,6 +23,14 @@ public class Money {
         } else {
             Massage.error();
         }
+    }
+
+    public long getRub() {
+        return rub;
+    }
+
+    public byte getKop() {
+        return kop;
     }
 
     public void setRub(long rub) {
@@ -74,39 +86,38 @@ public class Money {
         return res;
     }
 
-    public Money division(Money obj){
-        Money res = new Money();
-        float k = 60 / 100;
-        double div = (obj.rub + (obj.kop / 100));
-        double resRub = this.rub / div;
-        double resKop = this.kop / div;
+    public double division(Money obj) {              //деление сумм
+        double kopThis = this.rub * 100 + this.kop;
+        double kopObj = obj.rub * 100 + obj.kop;
+        double res = kopThis / kopObj;
         return res;
     }
 
-//    public Money division(Money obj) {              //деление сумм
-//        Money res = new Money();
-//        double scale = Math.pow(10, 2);
-//        long kopThis = this.rub * 100 + this.kop;
-//        long kopObj = obj.rub * 100 + obj.kop;
-//        if (kopObj == 0) {
-//            Massage.divOnNull();
-//        } else {
-//            double div = kopThis / kopObj;
-//            res.rub = (long) div;
-//            res.kop = (byte) (Math.ceil(div * scale) / scale);
-//        }
-//        return res;
-//    }
-
-    public Money differenceOnNumber(float value){            //умножение дробного числа на сумму
+    public Money differenceOnNumber(double value){//умножение дробного числа на сумму
+        DecimalFormat formatDouble = new DecimalFormat("#0,00");
         Money res = new Money();
-        float resRub = this.rub * value;
-        res.rub = (int) resRub;
-
+        double resRub = this.rub * value;
+        formatDouble.format(resRub);
+        res.rub = (long) resRub;
+        double resKop = this.kop * value;
+        double a = (resRub * 100) % 100;
+        resKop += a;
+        formatDouble.format(resKop);
+        if (resKop > 99){
+            res.rub += (long) resKop / 100;
+            res.kop = (byte) (resKop % 100);
+        }
+        res.kop = (byte) resKop;
         return res;
     }
 
                 //деление суммы на дробное число
+    public Money divisionOnNumber(double value){
+        Money newMoney = new Money();
+        newMoney.rub = (long) (this.rub / value);
+        newMoney.kop = (byte) (this.kop / value);
+        return newMoney;
+    }
 
     @Override
     public String toString() {

@@ -17,6 +17,14 @@ public class ComplexNumber {
         this.imzD = imzD;
     }
 
+    public double getRezD() {
+        return rezD;
+    }
+
+    public double getImzD() {
+        return imzD;
+    }
+
     public ComplexNumber summ(ComplexNumber obj){
         ComplexNumber res = new ComplexNumber();
         res.rezD = this.rezD + obj.rezD;

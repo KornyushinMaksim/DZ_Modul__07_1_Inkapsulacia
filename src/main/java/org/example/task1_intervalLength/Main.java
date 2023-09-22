@@ -19,6 +19,7 @@ public class Main {
         System.out.println("Введите диапазоны с пробелом через запятую (пр: 3 8, 4 9 и т.д.)");
         String strIn = in.nextLine();
 
+        //первая задача
         Task2 obj = new Task2();
         obj.setStrIn(strIn);
         System.out.println(obj);

@@ -10,10 +10,11 @@ public class Task1 {
         strOut = new String();
     }
 
-    public void setStrIn(String strIn) {
+    public String setStrIn(String strIn) {
         this.strIn = strIn;
         splitStr(strInArr);
         testStr();
+        return strOut;
     }
 
     private void splitStr(String[] strArr) {
@@ -34,21 +35,7 @@ public class Task1 {
             }
         }
     }
-
-//    public String intersection(int indexOne, int indexTwo) {
-//        int aOne = Integer.valueOf(strInArr[indexOne].substring(0, 1));
-//        int bOne = Integer.valueOf(strInArr[indexOne].substring(2, strInArr[indexOne].length()));
-//        int aTwo = Integer.valueOf(strInArr[indexTwo].substring(0, 1));
-//        int bTwo = Integer.valueOf(strInArr[indexTwo].substring(2, strInArr[indexTwo].length()));
-//
-//
-//        if ((aOne > aTwo && aOne < bTwo) || (bOne > aTwo && bOne < bTwo)) {
-//            return "Эти диапазоны пересекатся";
-//        } else {
-//            return "Диапазоны не пересеклись";
-//        }
-//    }
-
+    
     @Override
     public String toString() {
         return strOut;
